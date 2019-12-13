@@ -5,6 +5,8 @@ const forecast = require('./utils/forecast')
 const geocode = require('./utils/geocode')
 const app = express()
 
+//Setting up port through env variable
+const port = process.env.PORT || 3000
 
 
 //Setting up templating engine
@@ -81,6 +83,6 @@ app.get('*', (req, res) => {
 
 
 
-app.listen(3000, () => {
+app.listen(port, () => {
     console.log('Server Working...')
 })
